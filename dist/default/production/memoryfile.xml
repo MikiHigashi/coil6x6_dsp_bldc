@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/coil6x6_dsp_charger.X.production.elf">
+  <executable name="dist/default/production/coil6x6_dsp_bldc.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
-      <used>142</used>
-      <free>16242</free>
+      <used>8274</used>
+      <free>8110</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
       <length>261696</length>
-      <used>6147</used>
-      <free>255549</free>
+      <used>13980</used>
+      <free>247716</free>
     </memory>
   </executable>
 </project>

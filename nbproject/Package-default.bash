@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/coil6x6_dsp_dldc.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=coil6x6_dsp_dldc.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=coil6x6dspdldc.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/coil6x6_dsp_bldc.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=coil6x6_dsp_bldc.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=coil6x6dspbldc.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/coil6x6dspdldc.x/bin
+makeDirectory ${TMPDIR}/coil6x6dspbldc.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/coil6x6dspdldc.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/coil6x6dspbldc.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/coil6x6dspdldc.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/coil6x6dspbldc.x.tar *
 checkReturnCode
 
 # Cleanup

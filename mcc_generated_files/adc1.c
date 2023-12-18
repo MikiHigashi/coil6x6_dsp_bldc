@@ -63,14 +63,14 @@ void ADC1_Initialize (void)
 {
     // ASAM enabled; ADDMABM disabled; ADSIDL disabled; DONE disabled; SIMSAM Sequential; FORM Absolute decimal result, unsigned, right-justified; SAMP disabled; SSRC Internal counter ends sampling and starts conversion; AD12B 12-bit; ADON enabled; SSRCG disabled; 
     AD1CON1 = 0x84E4;
-    // CSCNA enabled; VCFG0 AVDD; VCFG1 AVSS; ALTS disabled; BUFM disabled; SMPI Generates interrupt after completion of every sample/conversion operation; CHPS 1 Channel; 
-    AD1CON2 = 0x400;
+    // CSCNA disabled; VCFG0 AVDD; VCFG1 AVSS; ALTS disabled; BUFM disabled; SMPI Generates interrupt after completion of every sample/conversion operation; CHPS 1 Channel; 
+    AD1CON2 = 0x00;
     // SAMC 24; ADRC FOSC/2; ADCS 31; 
     AD1CON3 = 0x181F;
     // CH0SA OA2/AN0; CH0SB OA2/AN0; CH0NB VREFL; CH0NA VREFL; 
     AD1CHS0 = 0x00;
-    // CSS26 disabled; CSS25 enabled; CSS24 disabled; CSS27 disabled; 
-    AD1CSSH = 0x200;
+    // CSS26 disabled; CSS25 disabled; CSS24 disabled; CSS27 disabled; 
+    AD1CSSH = 0x00;
     // CSS2 disabled; CSS1 disabled; CSS0 disabled; CSS5 disabled; CSS4 disabled; CSS3 disabled; 
     AD1CSSL = 0x00;
     // DMABL Allocates 1 word of buffer to each analog input; ADDMAEN enabled; 

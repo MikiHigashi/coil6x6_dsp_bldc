@@ -24,6 +24,8 @@
         <itemPath>mcc_generated_files/adc1.h</itemPath>
         <itemPath>mcc_generated_files/adc_module_features.h</itemPath>
         <itemPath>mcc_generated_files/dma.h</itemPath>
+        <itemPath>mcc_generated_files/tmr1.h</itemPath>
+        <itemPath>mcc_generated_files/tmr3.h</itemPath>
       </logicalFolder>
       <itemPath>lcd_i2c.h</itemPath>
       <itemPath>soft_i2c.h</itemPath>
@@ -50,10 +52,13 @@
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/adc1.c</itemPath>
         <itemPath>mcc_generated_files/dma.c</itemPath>
+        <itemPath>mcc_generated_files/tmr1.c</itemPath>
+        <itemPath>mcc_generated_files/tmr3.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>lcd_i2c.c</itemPath>
       <itemPath>soft_i2c.c</itemPath>
+      <itemPath>pwm_table.inc</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -295,6 +300,8 @@
         <property key="memories.programmemory.ranges" value="0-577f"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="Z:/coil6x6/power/coil6x6_dsp_dldc.X/debug/default/ld_drive1_ptg"/>
         <property key="programmerToGoImageName" value="ld_drive1_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -381,6 +388,8 @@
         <property key="memories.programmemory.ranges" value="0-577f"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="Z:/coil6x6/power/coil6x6_dsp_bldc.X/debug/default/ld_drive1_ptg"/>
         <property key="programmerToGoImageName" value="ld_drive1_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

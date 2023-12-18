@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=coil6x6_dsp_dldc.X
+PROJECTNAME=coil6x6_dsp_bldc.X
 
 # Active Configuration
 DEFAULTCONF=default

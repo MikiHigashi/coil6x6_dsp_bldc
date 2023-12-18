@@ -73,7 +73,7 @@ void PIN_MANAGER_Initialize (void)
      * Setting the GPIO Direction SFR(s)
      ***************************************************************************/
     TRISA = 0x000F;
-    TRISB = 0x5987;
+    TRISB = 0x57E7;
 
     /****************************************************************************
      * Setting the Weak Pull Up and Weak Pull Down SFR(s)
@@ -93,24 +93,24 @@ void PIN_MANAGER_Initialize (void)
      * Setting the Analog/Digital Configuration SFR(s)
      ***************************************************************************/
     ANSELA = 0x0000;
-    ANSELB = 0x0084;
+    ANSELB = 0x0080;
     
     /****************************************************************************
      * Set the PPS
      ***************************************************************************/
     __builtin_write_OSCCONL(OSCCON & 0xbf); // unlock PPS
 
-    RPOR0bits.RP20R = 0x0009;    //RA4->SPI2:SCK2OUT
     RPINR22bits.SDI2R = 0x0013;    //RA3->SPI2:SDI2
-    RPINR22bits.SCK2R = 0x0014;    //RA4->SPI2:SCK2OUT
     RPOR1bits.RP36R = 0x0008;    //RB4->SPI2:SDO2
+    RPINR22bits.SCK2R = 0x0014;    //RA4->SPI2:SCK2OUT
+    RPOR0bits.RP20R = 0x0009;    //RA4->SPI2:SCK2OUT
 
     __builtin_write_OSCCONL(OSCCON | 0x40); // lock PPS
     
     /****************************************************************************
      * Interrupt On Change: any
      ***************************************************************************/
-    CNENAbits.CNIEA0 = 1;    //Pin : RA0
+    CNENBbits.CNIEB2 = 1;    //Pin : RB2
     
     /* Initialize IOC Interrupt Handler*/
     CN_SetInterruptHandler(&CN_CallBack);
