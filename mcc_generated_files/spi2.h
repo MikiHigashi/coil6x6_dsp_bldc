@@ -179,21 +179,19 @@ typedef enum {
 
 void SPI2_Initialize (void);
 
-
-
 /**
   @Summary
-    Exchanges one byte of data from SPI2
+    Exchanges one word of data from SPI2
 
   @Description
-    This routine exchanges one byte of data from the SPI2.
+    This routine exchanges one word of data from SPI2.
     This is a blocking routine.
 
   @Preconditions
     The SPI2_Initialize routine must have been called for the specified
     SPI2 driver instance.
-    The SPI transfer mode should be selected as 8bit mode in the initialization. 
-    Do not select 16 bit mode, as additional data byte will be inserted for each 8 bit data if selected.
+    The SPI transfer mode should be selected as 16bit mode in the initialization. 
+    Do not select 8 bit mode, only the lower byte of the data will sent or received if selected. 
 
   @Returns
     Data read from SPI2
@@ -203,26 +201,27 @@ void SPI2_Initialize (void);
 
   @Example 
     Refer to SPI2_Initialize() for an example	
+ 
 */
-        
-uint8_t SPI2_Exchange8bit( uint8_t data );
+
+uint16_t SPI2_Exchange16bit( uint16_t data );
 
 /**
   @Summary
-    Exchanges data from a buffer of size one byte from SPI2
+    Exchanges data from a buffer of size one word from SPI2
 
   @Description
-    This routine exchanges data from a buffer of size one byte from the SPI2.
+    This routine exchanges data from a buffer of size one word from the SPI2.
     This is a blocking routine.
 
   @Preconditions
     The SPI2_Initialize routine must have been called for the specified
     SPI2 driver instance.
-    The SPI transfer mode should be selected as 8bit mode in the initialization. 
-    Do not select 16 bit mode, as additional data byte will be inserted for each 8 bit data if selected.
+    The SPI transfer mode should be selected as 16bit mode in the initialization. 
+    Do not select 8 bit mode, only the lower byte of the data will sent or received if selected. 
 
   @Returns
-    Number of 8bit data written/read.
+    Number of 16bit data written/read.
 
   @Param
     dataTransmitted         - Buffer of data to be written onto SPI2.
@@ -231,14 +230,15 @@ uint8_t SPI2_Exchange8bit( uint8_t data );
     byteCount         - Number of bytes to be exchanged.
  
   @Param
-    dataReceived         - Buffer of data to be read from SPI2.
+    dataTransmitted         - Buffer of data to be read from SPI2.
 
   @Example 
     Refer to SPI2_Initialize() for an example	
  
 */
 
-uint16_t SPI2_Exchange8bitBuffer(uint8_t *dataTransmitted, uint16_t byteCount, uint8_t *dataReceived);
+uint16_t SPI2_Exchange16bitBuffer(uint16_t *dataTransmitted, uint16_t byteCount, uint16_t *dataReceived);
+
 
 /**
   @Summary

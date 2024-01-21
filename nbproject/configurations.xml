@@ -59,6 +59,7 @@
       <itemPath>lcd_i2c.c</itemPath>
       <itemPath>soft_i2c.c</itemPath>
       <itemPath>pwm_table.inc</itemPath>
+      <itemPath>motor_table.inc</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -389,7 +390,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="Z:/coil6x6/power/coil6x6_dsp_bldc.X/debug/default/ld_drive1_ptg"/>
+                  value="Z:/coil6x6/power/coil6x6_dsp_dldc.X/debug/default/ld_drive1_ptg"/>
         <property key="programmerToGoImageName" value="ld_drive1_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

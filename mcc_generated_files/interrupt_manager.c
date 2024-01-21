@@ -55,7 +55,4 @@ void INTERRUPT_Initialize (void)
     //    CNI: Change Notification Interrupt
     //    Priority: 7
         IPC4bits.CNIP = 7;
-    //    TI: Timer 1
-    //    Priority: 1
-        IPC0bits.T1IP = 1;
 }
