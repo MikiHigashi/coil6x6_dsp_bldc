@@ -107,25 +107,25 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x1ba           0x297  (663)
-.dinit                       0x3ba              0x184c          0x2472  (9330)
-.text                       0x1c06               0xf34          0x16ce  (5838)
-.init.delay32               0x2b3a                0x1c            0x2a  (42)
-.text                       0x2b56                0x24            0x36  (54)
+.dinit                       0x3ba              0x1998          0x2664  (9828)
+.text                       0x1d52               0xdd8          0x14c4  (5316)
+.init.delay32               0x2b2a                0x1c            0x2a  (42)
+.text                       0x2b46                0x24            0x36  (54)
 
-                 Total "program" memory used (bytes):         0x3e37  (15927) 6%
+                 Total "program" memory used (bytes):         0x3e1f  (15903) 6%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                       0x1000                   0            0x10  (16)
-.ndata                      0x1010                   0             0x6  (6)
-.nbss                       0x1016                   0             0x4  (4)
-.data                       0x101a                   0          0x2402  (9218)
-.bss                        0x341c                   0           0x246  (582)
+.nbss                       0x1000                   0             0x6  (6)
+.ndata                      0x1006                   0             0x2  (2)
+.nbss                       0x1008                   0             0x4  (4)
+.data                       0x100c                   0          0x2602  (9730)
+.bss                        0x360e                   0            0x46  (70)
 
-                 Total "data" memory used (bytes):         0x2662  (9826) 59%
+                 Total "data" memory used (bytes):         0x2654  (9812) 59%
 
 
 Dynamic Memory Usage
@@ -133,44 +133,32 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x3662                              0x199e  (6558)
+stack                       0x3654                              0x19ac  (6572)
 
-                 Maximum dynamic memory (bytes):         0x199e  (6558)
+                 Maximum dynamic memory (bytes):         0x19ac  (6572)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x1000                  _sum_deg
-                    0x1004                  _pBufd
-                    0x1006                  _target_spd
-                    0x100a                  _now_advd
-                    0x100e                  _cnt_pwm
-                    0x100f                  _pwm_in
-                    0x1010                  _now_vol
-                    0x1016                  _CN_InterruptHandler
-                    0x101a                  _table_pwm
-                    0x301c                  _table_motor
-                    0x341c                  _BUFD
-                    0x349c                  _BUFS
-                    0x351c                  _SUMD
-                    0x361c                  _buf
+                    0x1000                  _target_spd
+                    0x1004                  _cnt_pwm
+                    0x1005                  _pwm_in
+                    0x1008                  _CN_InterruptHandler
+                    0x100c                  _table_pwm
+                    0x300e                  _table_pwmh
+                    0x320e                  _table_slowh
+                    0x362e                  _buf
 
 External Symbols in Data Memory (by name):
 
-                    0x341c                  _BUFD
-                    0x349c                  _BUFS
-                    0x1016                  _CN_InterruptHandler
-                    0x351c                  _SUMD
-                    0x361c                  _buf
-                    0x100e                  _cnt_pwm
-                    0x100a                  _now_advd
-                    0x1010                  _now_vol
-                    0x1004                  _pBufd
-                    0x100f                  _pwm_in
-                    0x1000                  _sum_deg
-                    0x301c                  _table_motor
-                    0x101a                  _table_pwm
-                    0x1006                  _target_spd
+                    0x1008                  _CN_InterruptHandler
+                    0x362e                  _buf
+                    0x1004                  _cnt_pwm
+                    0x1005                  _pwm_in
+                    0x100c                  _table_pwm
+                    0x300e                  _table_pwmh
+                    0x320e                  _table_slowh
+                    0x1000                  _target_spd
 
 External Symbols in Program Memory (by address):
 
@@ -188,166 +176,164 @@ External Symbols in Program Memory (by address):
                   0x00037a                  __CNInterrupt
                   0x0003a8                  __DefaultInterrupt
                   0x0003ae                  _strlen
-                  0x001c0e                  _int_pwm
-                  0x001c72                  _as5048a
-                  0x001c86                  _get_pwm1
-                  0x001d3a                  _add_d_and_vol0
-                  0x001eb6                  _add_d_and_vol
-                  0x001f04                  _get_speed
-                  0x001f5c                  _main
-                  0x002074                  _LCD_clear_pos
-                  0x00209e                  _LCD_i2C_data
-                  0x00212a                  _LCD_i2C_cmd
-                  0x002180                  _LCD_i2c_init
-                  0x00223c                  _SPI2_Initialize
-                  0x00224e                  _SPI2_Exchange
-                  0x00227a                  _SPI2_ExchangeBuffer
-                  0x002344                  _SPI2_Exchange16bit
-                  0x002354                  _SPI2_Exchange16bitBuffer
-                  0x00236a                  _SPI2_TransferModeGet
-                  0x002380                  _SPI2_StatusGet
-                  0x002388                  _I2C_start
-                  0x0023a8                  _I2C_stop
-                  0x0023c2                  _I2C_send
-                  0x00240a                  _I2C_rcv
-                  0x002448                  _I2C_ackchk
-                  0x002466                  _I2C_acksnd
-                  0x002486                  _I2C_nacksnd
-                  0x0024a6                  _PWM_Initialize
-                  0x002560                  _PWM_SpecialEvent_Tasks
-                  0x00257a                  _PWM_Generator1_Tasks
-                  0x002594                  _PWM_Generator2_Tasks
-                  0x0025ae                  _PWM_Generator3_Tasks
-                  0x0025c2                  _RESET_GetCause
-                  0x0026ce                  _RESET_CauseClearAll
-                  0x0026d6                  _DMA_Initialize
-                  0x002738                  _DMA_Channel0_Tasks
-                  0x002750                  _DMA_Channel1_Tasks
-                  0x00276a                  _DMA_Channel2_Tasks
-                  0x002784                  _DMA_Channel3_Tasks
-                  0x002796                  _TMR2_Initialize
-                  0x0027ac                  _TMR2_Tasks_16BitOperation
-                  0x0027ce                  _TMR2_Period16BitSet
-                  0x0027e0                  _TMR2_Period16BitGet
-                  0x0027e8                  _TMR2_Counter16BitSet
-                  0x0027fa                  _TMR2_Counter16BitGet
-                  0x002802                  _TMR2_Start
-                  0x002810                  _TMR2_Stop
-                  0x002818                  _TMR2_GetElapsedThenClear
-                  0x002830                  _TMR2_SoftwareCounterGet
-                  0x00283c                  _TMR2_SoftwareCounterClear
-                  0x002848                  _TMR3_Initialize
-                  0x00285e                  _TMR3_Tasks_16BitOperation
-                  0x002880                  _TMR3_Period16BitSet
-                  0x002892                  _TMR3_Period16BitGet
-                  0x00289a                  _TMR3_Counter16BitSet
-                  0x0028ac                  _TMR3_Counter16BitGet
-                  0x0028b4                  _TMR3_Start
-                  0x0028c2                  _TMR3_Stop
-                  0x0028ca                  _TMR3_GetElapsedThenClear
-                  0x0028e2                  _TMR3_SoftwareCounterGet
-                  0x0028ee                  _TMR3_SoftwareCounterClear
-                  0x0028fa                  _TMR1_Initialize
-                  0x002910                  _TMR1_Tasks_16BitOperation
-                  0x002930                  _TMR1_Period16BitSet
-                  0x002942                  _TMR1_Period16BitGet
-                  0x00294a                  _TMR1_Counter16BitSet
-                  0x00295c                  _TMR1_Counter16BitGet
-                  0x002964                  _TMR1_Start
-                  0x002972                  _TMR1_Stop
-                  0x00297a                  _TMR1_GetElapsedThenClear
-                  0x002992                  _TMR1_SoftwareCounterGet
-                  0x00299e                  _TMR1_SoftwareCounterClear
-                  0x0029aa                  _PIN_MANAGER_Initialize
-                  0x002a1e                  _CN_SetInterruptHandler
-                  0x002a2e                  _CN_SetIOCInterruptHandler
-                  0x002a3a                  _CLOCK_Initialize
-                  0x002a8c                  _ADC1_Initialize
-                  0x002ab4                  _ADC1_SetInterruptHandler
-                  0x002afa                  _SYSTEM_Initialize
-                  0x002b1a                  _OSCILLATOR_Initialize
-                  0x002b22                  _SYSTEM_GetResetCause
-                  0x002b32                  _SYSTEM_ResetCauseClearAll
-                  0x002b3a                  ___delay32
-                  0x002b6c                  _INTERRUPT_Initialize
+                  0x001d5a                  _int_pwm
+                  0x001dbe                  _as5048a
+                  0x001dd2                  _get_pwm1
+                  0x001e8a                  _get_pwm2
+                  0x001f2c                  _main
+                  0x002064                  _LCD_clear_pos
+                  0x00208e                  _LCD_i2C_data
+                  0x00211a                  _LCD_i2C_cmd
+                  0x002170                  _LCD_i2c_init
+                  0x00222c                  _SPI2_Initialize
+                  0x00223e                  _SPI2_Exchange
+                  0x00226a                  _SPI2_ExchangeBuffer
+                  0x002334                  _SPI2_Exchange16bit
+                  0x002344                  _SPI2_Exchange16bitBuffer
+                  0x00235a                  _SPI2_TransferModeGet
+                  0x002370                  _SPI2_StatusGet
+                  0x002378                  _I2C_start
+                  0x002398                  _I2C_stop
+                  0x0023b2                  _I2C_send
+                  0x0023fa                  _I2C_rcv
+                  0x002438                  _I2C_ackchk
+                  0x002456                  _I2C_acksnd
+                  0x002476                  _I2C_nacksnd
+                  0x002496                  _PWM_Initialize
+                  0x002550                  _PWM_SpecialEvent_Tasks
+                  0x00256a                  _PWM_Generator1_Tasks
+                  0x002584                  _PWM_Generator2_Tasks
+                  0x00259e                  _PWM_Generator3_Tasks
+                  0x0025b2                  _RESET_GetCause
+                  0x0026be                  _RESET_CauseClearAll
+                  0x0026c6                  _DMA_Initialize
+                  0x002728                  _DMA_Channel0_Tasks
+                  0x002740                  _DMA_Channel1_Tasks
+                  0x00275a                  _DMA_Channel2_Tasks
+                  0x002774                  _DMA_Channel3_Tasks
+                  0x002786                  _TMR2_Initialize
+                  0x00279c                  _TMR2_Tasks_16BitOperation
+                  0x0027be                  _TMR2_Period16BitSet
+                  0x0027d0                  _TMR2_Period16BitGet
+                  0x0027d8                  _TMR2_Counter16BitSet
+                  0x0027ea                  _TMR2_Counter16BitGet
+                  0x0027f2                  _TMR2_Start
+                  0x002800                  _TMR2_Stop
+                  0x002808                  _TMR2_GetElapsedThenClear
+                  0x002820                  _TMR2_SoftwareCounterGet
+                  0x00282c                  _TMR2_SoftwareCounterClear
+                  0x002838                  _TMR3_Initialize
+                  0x00284e                  _TMR3_Tasks_16BitOperation
+                  0x002870                  _TMR3_Period16BitSet
+                  0x002882                  _TMR3_Period16BitGet
+                  0x00288a                  _TMR3_Counter16BitSet
+                  0x00289c                  _TMR3_Counter16BitGet
+                  0x0028a4                  _TMR3_Start
+                  0x0028b2                  _TMR3_Stop
+                  0x0028ba                  _TMR3_GetElapsedThenClear
+                  0x0028d2                  _TMR3_SoftwareCounterGet
+                  0x0028de                  _TMR3_SoftwareCounterClear
+                  0x0028ea                  _TMR1_Initialize
+                  0x002900                  _TMR1_Tasks_16BitOperation
+                  0x002920                  _TMR1_Period16BitSet
+                  0x002932                  _TMR1_Period16BitGet
+                  0x00293a                  _TMR1_Counter16BitSet
+                  0x00294c                  _TMR1_Counter16BitGet
+                  0x002954                  _TMR1_Start
+                  0x002962                  _TMR1_Stop
+                  0x00296a                  _TMR1_GetElapsedThenClear
+                  0x002982                  _TMR1_SoftwareCounterGet
+                  0x00298e                  _TMR1_SoftwareCounterClear
+                  0x00299a                  _PIN_MANAGER_Initialize
+                  0x002a0e                  _CN_SetInterruptHandler
+                  0x002a1e                  _CN_SetIOCInterruptHandler
+                  0x002a2a                  _CLOCK_Initialize
+                  0x002a7c                  _ADC1_Initialize
+                  0x002aa4                  _ADC1_SetInterruptHandler
+                  0x002aea                  _SYSTEM_Initialize
+                  0x002b0a                  _OSCILLATOR_Initialize
+                  0x002b12                  _SYSTEM_GetResetCause
+                  0x002b22                  _SYSTEM_ResetCauseClearAll
+                  0x002b2a                  ___delay32
+                  0x002b5c                  _INTERRUPT_Initialize
                   0x02ab80                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x002a8c                  _ADC1_Initialize
-                  0x002ab4                  _ADC1_SetInterruptHandler
-                  0x002a3a                  _CLOCK_Initialize
-                  0x002a2e                  _CN_SetIOCInterruptHandler
-                  0x002a1e                  _CN_SetInterruptHandler
-                  0x002738                  _DMA_Channel0_Tasks
-                  0x002750                  _DMA_Channel1_Tasks
-                  0x00276a                  _DMA_Channel2_Tasks
-                  0x002784                  _DMA_Channel3_Tasks
-                  0x0026d6                  _DMA_Initialize
-                  0x002448                  _I2C_ackchk
-                  0x002466                  _I2C_acksnd
-                  0x002486                  _I2C_nacksnd
-                  0x00240a                  _I2C_rcv
-                  0x0023c2                  _I2C_send
-                  0x002388                  _I2C_start
-                  0x0023a8                  _I2C_stop
-                  0x002b6c                  _INTERRUPT_Initialize
-                  0x002074                  _LCD_clear_pos
-                  0x00212a                  _LCD_i2C_cmd
-                  0x00209e                  _LCD_i2C_data
-                  0x002180                  _LCD_i2c_init
-                  0x002b1a                  _OSCILLATOR_Initialize
-                  0x0029aa                  _PIN_MANAGER_Initialize
-                  0x00257a                  _PWM_Generator1_Tasks
-                  0x002594                  _PWM_Generator2_Tasks
-                  0x0025ae                  _PWM_Generator3_Tasks
-                  0x0024a6                  _PWM_Initialize
-                  0x002560                  _PWM_SpecialEvent_Tasks
-                  0x0026ce                  _RESET_CauseClearAll
-                  0x0025c2                  _RESET_GetCause
-                  0x00224e                  _SPI2_Exchange
-                  0x002344                  _SPI2_Exchange16bit
-                  0x002354                  _SPI2_Exchange16bitBuffer
-                  0x00227a                  _SPI2_ExchangeBuffer
-                  0x00223c                  _SPI2_Initialize
-                  0x002380                  _SPI2_StatusGet
-                  0x00236a                  _SPI2_TransferModeGet
-                  0x002b22                  _SYSTEM_GetResetCause
-                  0x002afa                  _SYSTEM_Initialize
-                  0x002b32                  _SYSTEM_ResetCauseClearAll
-                  0x00295c                  _TMR1_Counter16BitGet
-                  0x00294a                  _TMR1_Counter16BitSet
-                  0x00297a                  _TMR1_GetElapsedThenClear
-                  0x0028fa                  _TMR1_Initialize
-                  0x002942                  _TMR1_Period16BitGet
-                  0x002930                  _TMR1_Period16BitSet
-                  0x00299e                  _TMR1_SoftwareCounterClear
-                  0x002992                  _TMR1_SoftwareCounterGet
-                  0x002964                  _TMR1_Start
-                  0x002972                  _TMR1_Stop
-                  0x002910                  _TMR1_Tasks_16BitOperation
-                  0x0027fa                  _TMR2_Counter16BitGet
-                  0x0027e8                  _TMR2_Counter16BitSet
-                  0x002818                  _TMR2_GetElapsedThenClear
-                  0x002796                  _TMR2_Initialize
-                  0x0027e0                  _TMR2_Period16BitGet
-                  0x0027ce                  _TMR2_Period16BitSet
-                  0x00283c                  _TMR2_SoftwareCounterClear
-                  0x002830                  _TMR2_SoftwareCounterGet
-                  0x002802                  _TMR2_Start
-                  0x002810                  _TMR2_Stop
-                  0x0027ac                  _TMR2_Tasks_16BitOperation
-                  0x0028ac                  _TMR3_Counter16BitGet
-                  0x00289a                  _TMR3_Counter16BitSet
-                  0x0028ca                  _TMR3_GetElapsedThenClear
-                  0x002848                  _TMR3_Initialize
-                  0x002892                  _TMR3_Period16BitGet
-                  0x002880                  _TMR3_Period16BitSet
-                  0x0028ee                  _TMR3_SoftwareCounterClear
-                  0x0028e2                  _TMR3_SoftwareCounterGet
-                  0x0028b4                  _TMR3_Start
-                  0x0028c2                  _TMR3_Stop
-                  0x00285e                  _TMR3_Tasks_16BitOperation
+                  0x002a7c                  _ADC1_Initialize
+                  0x002aa4                  _ADC1_SetInterruptHandler
+                  0x002a2a                  _CLOCK_Initialize
+                  0x002a1e                  _CN_SetIOCInterruptHandler
+                  0x002a0e                  _CN_SetInterruptHandler
+                  0x002728                  _DMA_Channel0_Tasks
+                  0x002740                  _DMA_Channel1_Tasks
+                  0x00275a                  _DMA_Channel2_Tasks
+                  0x002774                  _DMA_Channel3_Tasks
+                  0x0026c6                  _DMA_Initialize
+                  0x002438                  _I2C_ackchk
+                  0x002456                  _I2C_acksnd
+                  0x002476                  _I2C_nacksnd
+                  0x0023fa                  _I2C_rcv
+                  0x0023b2                  _I2C_send
+                  0x002378                  _I2C_start
+                  0x002398                  _I2C_stop
+                  0x002b5c                  _INTERRUPT_Initialize
+                  0x002064                  _LCD_clear_pos
+                  0x00211a                  _LCD_i2C_cmd
+                  0x00208e                  _LCD_i2C_data
+                  0x002170                  _LCD_i2c_init
+                  0x002b0a                  _OSCILLATOR_Initialize
+                  0x00299a                  _PIN_MANAGER_Initialize
+                  0x00256a                  _PWM_Generator1_Tasks
+                  0x002584                  _PWM_Generator2_Tasks
+                  0x00259e                  _PWM_Generator3_Tasks
+                  0x002496                  _PWM_Initialize
+                  0x002550                  _PWM_SpecialEvent_Tasks
+                  0x0026be                  _RESET_CauseClearAll
+                  0x0025b2                  _RESET_GetCause
+                  0x00223e                  _SPI2_Exchange
+                  0x002334                  _SPI2_Exchange16bit
+                  0x002344                  _SPI2_Exchange16bitBuffer
+                  0x00226a                  _SPI2_ExchangeBuffer
+                  0x00222c                  _SPI2_Initialize
+                  0x002370                  _SPI2_StatusGet
+                  0x00235a                  _SPI2_TransferModeGet
+                  0x002b12                  _SYSTEM_GetResetCause
+                  0x002aea                  _SYSTEM_Initialize
+                  0x002b22                  _SYSTEM_ResetCauseClearAll
+                  0x00294c                  _TMR1_Counter16BitGet
+                  0x00293a                  _TMR1_Counter16BitSet
+                  0x00296a                  _TMR1_GetElapsedThenClear
+                  0x0028ea                  _TMR1_Initialize
+                  0x002932                  _TMR1_Period16BitGet
+                  0x002920                  _TMR1_Period16BitSet
+                  0x00298e                  _TMR1_SoftwareCounterClear
+                  0x002982                  _TMR1_SoftwareCounterGet
+                  0x002954                  _TMR1_Start
+                  0x002962                  _TMR1_Stop
+                  0x002900                  _TMR1_Tasks_16BitOperation
+                  0x0027ea                  _TMR2_Counter16BitGet
+                  0x0027d8                  _TMR2_Counter16BitSet
+                  0x002808                  _TMR2_GetElapsedThenClear
+                  0x002786                  _TMR2_Initialize
+                  0x0027d0                  _TMR2_Period16BitGet
+                  0x0027be                  _TMR2_Period16BitSet
+                  0x00282c                  _TMR2_SoftwareCounterClear
+                  0x002820                  _TMR2_SoftwareCounterGet
+                  0x0027f2                  _TMR2_Start
+                  0x002800                  _TMR2_Stop
+                  0x00279c                  _TMR2_Tasks_16BitOperation
+                  0x00289c                  _TMR3_Counter16BitGet
+                  0x00288a                  _TMR3_Counter16BitSet
+                  0x0028ba                  _TMR3_GetElapsedThenClear
+                  0x002838                  _TMR3_Initialize
+                  0x002882                  _TMR3_Period16BitGet
+                  0x002870                  _TMR3_Period16BitSet
+                  0x0028de                  _TMR3_SoftwareCounterClear
+                  0x0028d2                  _TMR3_SoftwareCounterGet
+                  0x0028a4                  _TMR3_Start
+                  0x0028b2                  _TMR3_Stop
+                  0x00284e                  _TMR3_Tasks_16BitOperation
                   0x000318                  __AddressError
                   0x00037a                  __CNInterrupt
                   0x000328                  __DMACError
@@ -358,18 +344,16 @@ External Symbols in Program Memory (by name):
                   0x000306                  __OscillatorFail
                   0x000338                  __SoftTrapError
                   0x00030e                  __StackError
-                  0x002b3a                  ___delay32
+                  0x002b2a                  ___delay32
                   0x000248                  __data_init
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x001eb6                  _add_d_and_vol
-                  0x001d3a                  _add_d_and_vol0
-                  0x001c72                  _as5048a
-                  0x001c86                  _get_pwm1
-                  0x001f04                  _get_speed
-                  0x001c0e                  _int_pwm
-                  0x001f5c                  _main
+                  0x001dbe                  _as5048a
+                  0x001dd2                  _get_pwm1
+                  0x001e8a                  _get_pwm2
+                  0x001d5a                  _int_pwm
+                  0x001f2c                  _main
                   0x0003ae                  _strlen
 
 Memory Configuration
@@ -532,7 +516,7 @@ __FALTREG
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x1a5ae
+.debug_info       0x000000      0x1a46c
  *(.debug_info)
  .debug_info      0x000000        0x481 build/default/production/mcc_generated_files/reset.o
  .debug_info      0x000481       0x3800 build/default/production/mcc_generated_files/system.o
@@ -548,12 +532,12 @@ __FALTREG
  .debug_info      0x00cb3c       0x18a0 build/default/production/mcc_generated_files/dma.o
  .debug_info      0x00e3dc        0x6a6 build/default/production/mcc_generated_files/tmr1.o
  .debug_info      0x00ea82        0x692 build/default/production/mcc_generated_files/tmr3.o
- .debug_info      0x00f114       0x3f39 build/default/production/main.o
- .debug_info      0x01304d       0x3847 build/default/production/lcd_i2c.o
- .debug_info      0x016894       0x3d1a build/default/production/soft_i2c.o
+ .debug_info      0x00f114       0x3df7 build/default/production/main.o
+ .debug_info      0x012f0b       0x3847 build/default/production/lcd_i2c.o
+ .debug_info      0x016752       0x3d1a build/default/production/soft_i2c.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x1317
+.debug_abbrev     0x000000       0x1319
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xf6 build/default/production/mcc_generated_files/reset.o
  .debug_abbrev    0x0000f6        0x13a build/default/production/mcc_generated_files/system.o
@@ -569,11 +553,11 @@ __FALTREG
  .debug_abbrev    0x000b7a         0xda build/default/production/mcc_generated_files/dma.o
  .debug_abbrev    0x000c54        0x148 build/default/production/mcc_generated_files/tmr1.o
  .debug_abbrev    0x000d9c        0x148 build/default/production/mcc_generated_files/tmr3.o
- .debug_abbrev    0x000ee4        0x1d5 build/default/production/main.o
- .debug_abbrev    0x0010b9        0x116 build/default/production/lcd_i2c.o
- .debug_abbrev    0x0011cf        0x148 build/default/production/soft_i2c.o
+ .debug_abbrev    0x000ee4        0x1d7 build/default/production/main.o
+ .debug_abbrev    0x0010bb        0x116 build/default/production/lcd_i2c.o
+ .debug_abbrev    0x0011d1        0x148 build/default/production/soft_i2c.o
 
-.debug_line       0x000000       0x15e3
+.debug_line       0x000000       0x15c4
  *(.debug_line)
  .debug_line      0x000000        0x15a build/default/production/mcc_generated_files/reset.o
  .debug_line      0x00015a        0x15f build/default/production/mcc_generated_files/system.o
@@ -589,11 +573,11 @@ __FALTREG
  .debug_line      0x000db6        0x14d build/default/production/mcc_generated_files/dma.o
  .debug_line      0x000f03        0x139 build/default/production/mcc_generated_files/tmr1.o
  .debug_line      0x00103c        0x139 build/default/production/mcc_generated_files/tmr3.o
- .debug_line      0x001175        0x1e2 build/default/production/main.o
- .debug_line      0x001357        0x136 build/default/production/lcd_i2c.o
- .debug_line      0x00148d        0x156 build/default/production/soft_i2c.o
+ .debug_line      0x001175        0x1c3 build/default/production/main.o
+ .debug_line      0x001338        0x136 build/default/production/lcd_i2c.o
+ .debug_line      0x00146e        0x156 build/default/production/soft_i2c.o
 
-.debug_frame      0x000000        0xcbc
+.debug_frame      0x000000        0xc88
  *(.debug_frame)
  .debug_frame     0x000000        0x118 build/default/production/mcc_generated_files/reset.o
  .debug_frame     0x000118         0x62 build/default/production/mcc_generated_files/system.o
@@ -609,11 +593,11 @@ __FALTREG
  .debug_frame     0x000730         0xfe build/default/production/mcc_generated_files/dma.o
  .debug_frame     0x00082e        0x132 build/default/production/mcc_generated_files/tmr1.o
  .debug_frame     0x000960        0x132 build/default/production/mcc_generated_files/tmr3.o
- .debug_frame     0x000a92         0xe4 build/default/production/main.o
- .debug_frame     0x000b76         0x7c build/default/production/lcd_i2c.o
- .debug_frame     0x000bf2         0xca build/default/production/soft_i2c.o
+ .debug_frame     0x000a92         0xb0 build/default/production/main.o
+ .debug_frame     0x000b42         0x7c build/default/production/lcd_i2c.o
+ .debug_frame     0x000bbe         0xca build/default/production/soft_i2c.o
 
-.debug_str        0x000000       0x166b
+.debug_str        0x000000       0x1662
  *(.debug_str)
  .debug_str       0x000000         0x17 build/default/production/mcc_generated_files/reset.o
  .debug_str       0x000017        0x370 build/default/production/mcc_generated_files/system.o
@@ -629,9 +613,9 @@ __FALTREG
  .debug_str       0x0009de        0x199 build/default/production/mcc_generated_files/dma.o
  .debug_str       0x000b77         0x13 build/default/production/mcc_generated_files/tmr1.o
  .debug_str       0x000b8a         0x13 build/default/production/mcc_generated_files/tmr3.o
- .debug_str       0x000b9d        0x3b6 build/default/production/main.o
- .debug_str       0x000f53        0x379 build/default/production/lcd_i2c.o
- .debug_str       0x0012cc        0x39f build/default/production/soft_i2c.o
+ .debug_str       0x000b9d        0x3ad build/default/production/main.o
+ .debug_str       0x000f4a        0x379 build/default/production/lcd_i2c.o
+ .debug_str       0x0012c3        0x39f build/default/production/soft_i2c.o
 
 .debug_loc
  *(.debug_loc)
@@ -640,7 +624,7 @@ __FALTREG
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0xaac
+                  0x000000        0xa4b
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x54 build/default/production/mcc_generated_files/reset.o
@@ -671,11 +655,11 @@ __FALTREG
  .debug_pubnames
                   0x0007bf        0x11a build/default/production/mcc_generated_files/tmr3.o
  .debug_pubnames
-                  0x0008d9        0x109 build/default/production/main.o
+                  0x0008d9         0xa8 build/default/production/main.o
  .debug_pubnames
-                  0x0009e2         0x56 build/default/production/lcd_i2c.o
+                  0x000981         0x56 build/default/production/lcd_i2c.o
  .debug_pubnames
-                  0x000a38         0x74 build/default/production/soft_i2c.o
+                  0x0009d7         0x74 build/default/production/soft_i2c.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -2116,40 +2100,33 @@ __c30_signature
  __c30_signature
                   0x0022c4          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(strlen.EP_eo)
 
-.nbss               0x1000         0x10
- .nbss              0x1000         0x10 build/default/production/main.o
-                    0x1000                  _sum_deg
-                    0x1004                  _pBufd
-                    0x1006                  _target_spd
-                    0x100a                  _now_advd
-                    0x100e                  _cnt_pwm
-                    0x100f                  _pwm_in
+.nbss               0x1000          0x6
+ .nbss              0x1000          0x6 build/default/production/main.o
+                    0x1000                  _target_spd
+                    0x1004                  _cnt_pwm
+                    0x1005                  _pwm_in
 
-.ndata              0x1010          0x6
- .ndata             0x1010          0x4 build/default/production/main.o
-                    0x1010                  _now_vol
- .ndata             0x1014          0x2 build/default/production/mcc_generated_files/traps.o
+.ndata              0x1006          0x2
+ .ndata             0x1006          0x2 build/default/production/mcc_generated_files/traps.o
 
-.nbss               0x1016          0x4
- .nbss              0x1016          0x2 build/default/production/mcc_generated_files/pin_manager.o
-                    0x1016                  _CN_InterruptHandler
- .nbss              0x1018          0x2 build/default/production/mcc_generated_files/adc1.o
+.nbss               0x1008          0x4
+ .nbss              0x1008          0x2 build/default/production/mcc_generated_files/pin_manager.o
+                    0x1008                  _CN_InterruptHandler
+ .nbss              0x100a          0x2 build/default/production/mcc_generated_files/adc1.o
 
-.data               0x101a       0x2402
- .data              0x101a       0x2402 build/default/production/main.o
-                    0x101a                  _table_pwm
-                    0x301c                  _table_motor
+.data               0x100c       0x2602
+ .data              0x100c       0x2602 build/default/production/main.o
+                    0x100c                  _table_pwm
+                    0x300e                  _table_pwmh
+                    0x320e                  _table_slowh
 
-.bss                0x341c        0x246
- .bss               0x341c        0x220 build/default/production/main.o
-                    0x341c                  _BUFD
-                    0x349c                  _BUFS
-                    0x351c                  _SUMD
-                    0x361c                  _buf
- .bss               0x363c         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x365c          0x2 build/default/production/mcc_generated_files/tmr2.o
- .bss               0x365e          0x2 build/default/production/mcc_generated_files/tmr1.o
- .bss               0x3660          0x2 build/default/production/mcc_generated_files/tmr3.o
+.bss                0x360e         0x46
+ .bss               0x360e         0x20 build/default/production/mcc_generated_files/traps.o
+ .bss               0x362e         0x20 build/default/production/main.o
+                    0x362e                  _buf
+ .bss               0x364e          0x2 build/default/production/mcc_generated_files/tmr2.o
+ .bss               0x3650          0x2 build/default/production/mcc_generated_files/tmr1.o
+ .bss               0x3652          0x2 build/default/production/mcc_generated_files/tmr3.o
 
 .ivt._OscillatorFail
                   0x000004          0x2
@@ -2243,125 +2220,123 @@ __c30_signature
  .ivt._CNInterrupt
                   0x00003a          0x2 build/default/production/mcc_generated_files/pin_manager.o
 
-.dinit            0x0003ba       0x184c
- .dinit           0x0003ba       0x184c data_init
+.dinit            0x0003ba       0x1998
+ .dinit           0x0003ba       0x1998 data_init
 
-.text             0x001c06        0xf34
- .text            0x001c06        0x46e build/default/production/main.o
-                  0x001c0e                  _int_pwm
-                  0x001c72                  _as5048a
-                  0x001c86                  _get_pwm1
-                  0x001d3a                  _add_d_and_vol0
-                  0x001eb6                  _add_d_and_vol
-                  0x001f04                  _get_speed
-                  0x001f5c                  _main
- .text            0x002074        0x1c8 build/default/production/lcd_i2c.o
-                  0x002074                  _LCD_clear_pos
-                  0x00209e                  _LCD_i2C_data
-                  0x00212a                  _LCD_i2C_cmd
-                  0x002180                  _LCD_i2c_init
- .text            0x00223c        0x14c build/default/production/mcc_generated_files/spi2.o
-                  0x00223c                  _SPI2_Initialize
-                  0x00224e                  _SPI2_Exchange
-                  0x00227a                  _SPI2_ExchangeBuffer
-                  0x002344                  _SPI2_Exchange16bit
-                  0x002354                  _SPI2_Exchange16bitBuffer
-                  0x00236a                  _SPI2_TransferModeGet
-                  0x002380                  _SPI2_StatusGet
- .text            0x002388        0x11e build/default/production/soft_i2c.o
-                  0x002388                  _I2C_start
-                  0x0023a8                  _I2C_stop
-                  0x0023c2                  _I2C_send
-                  0x00240a                  _I2C_rcv
-                  0x002448                  _I2C_ackchk
-                  0x002466                  _I2C_acksnd
-                  0x002486                  _I2C_nacksnd
- .text            0x0024a6        0x11c build/default/production/mcc_generated_files/pwm.o
-                  0x0024a6                  _PWM_Initialize
-                  0x00255a                  _PWM_SpecialEvent_CallBack
-                  0x002560                  _PWM_SpecialEvent_Tasks
-                  0x002574                  _PWM_Generator1_CallBack
-                  0x00257a                  _PWM_Generator1_Tasks
-                  0x00258e                  _PWM_Generator2_CallBack
-                  0x002594                  _PWM_Generator2_Tasks
-                  0x0025a8                  _PWM_Generator3_CallBack
-                  0x0025ae                  _PWM_Generator3_Tasks
- .text            0x0025c2        0x114 build/default/production/mcc_generated_files/reset.o
-                  0x0025c2                  _RESET_GetCause
-                  0x0025ca                  _RESET_CauseHandler
-                  0x0026ce                  _RESET_CauseClearAll
- .text            0x0026d6         0xc0 build/default/production/mcc_generated_files/dma.o
-                  0x0026d6                  _DMA_Initialize
-                  0x002732                  _DMA_Channel0_CallBack
-                  0x002738                  _DMA_Channel0_Tasks
-                  0x00274a                  _DMA_Channel1_CallBack
-                  0x002750                  _DMA_Channel1_Tasks
-                  0x002764                  _DMA_Channel2_CallBack
-                  0x00276a                  _DMA_Channel2_Tasks
-                  0x00277e                  _DMA_Channel3_CallBack
-                  0x002784                  _DMA_Channel3_Tasks
- .text            0x002796         0xb2 build/default/production/mcc_generated_files/tmr2.o
-                  0x002796                  _TMR2_Initialize
-                  0x0027ac                  _TMR2_Tasks_16BitOperation
-                  0x0027ce                  _TMR2_Period16BitSet
-                  0x0027e0                  _TMR2_Period16BitGet
-                  0x0027e8                  _TMR2_Counter16BitSet
-                  0x0027fa                  _TMR2_Counter16BitGet
-                  0x002802                  _TMR2_Start
-                  0x002810                  _TMR2_Stop
-                  0x002818                  _TMR2_GetElapsedThenClear
-                  0x002830                  _TMR2_SoftwareCounterGet
-                  0x00283c                  _TMR2_SoftwareCounterClear
- .text            0x002848         0xb2 build/default/production/mcc_generated_files/tmr3.o
-                  0x002848                  _TMR3_Initialize
-                  0x00285e                  _TMR3_Tasks_16BitOperation
-                  0x002880                  _TMR3_Period16BitSet
-                  0x002892                  _TMR3_Period16BitGet
-                  0x00289a                  _TMR3_Counter16BitSet
-                  0x0028ac                  _TMR3_Counter16BitGet
-                  0x0028b4                  _TMR3_Start
-                  0x0028c2                  _TMR3_Stop
-                  0x0028ca                  _TMR3_GetElapsedThenClear
-                  0x0028e2                  _TMR3_SoftwareCounterGet
-                  0x0028ee                  _TMR3_SoftwareCounterClear
- .text            0x0028fa         0xb0 build/default/production/mcc_generated_files/tmr1.o
-                  0x0028fa                  _TMR1_Initialize
-                  0x002910                  _TMR1_Tasks_16BitOperation
-                  0x002930                  _TMR1_Period16BitSet
-                  0x002942                  _TMR1_Period16BitGet
-                  0x00294a                  _TMR1_Counter16BitSet
-                  0x00295c                  _TMR1_Counter16BitGet
-                  0x002964                  _TMR1_Start
-                  0x002972                  _TMR1_Stop
-                  0x00297a                  _TMR1_GetElapsedThenClear
-                  0x002992                  _TMR1_SoftwareCounterGet
-                  0x00299e                  _TMR1_SoftwareCounterClear
- .text            0x0029aa         0x90 build/default/production/mcc_generated_files/pin_manager.o
-                  0x0029aa                  _PIN_MANAGER_Initialize
-                  0x002a18                  _CN_CallBack
-                  0x002a1e                  _CN_SetInterruptHandler
-                  0x002a2e                  _CN_SetIOCInterruptHandler
- .text            0x002a3a         0x52 build/default/production/mcc_generated_files/clock.o
-                  0x002a3a                  _CLOCK_Initialize
- .text            0x002a8c         0x50 build/default/production/mcc_generated_files/adc1.o
-                  0x002a8c                  _ADC1_Initialize
-                  0x002aae                  _ADC1_CallBack
-                  0x002ab4                  _ADC1_SetInterruptHandler
-                  0x002ac0                  _ADC1_Tasks
- .text            0x002adc         0x3e build/default/production/mcc_generated_files/system.o
-                  0x002afa                  _SYSTEM_Initialize
- .text            0x002b1a         0x20 build/default/production/mcc_generated_files/mcc.o
-                  0x002b1a                  _OSCILLATOR_Initialize
-                  0x002b22                  _SYSTEM_GetResetCause
-                  0x002b2a                  _SYSTEM_ResetCauseHandler
-                  0x002b32                  _SYSTEM_ResetCauseClearAll
+.text             0x001d52        0xdd8
+ .text            0x001d52        0x312 build/default/production/main.o
+                  0x001d5a                  _int_pwm
+                  0x001dbe                  _as5048a
+                  0x001dd2                  _get_pwm1
+                  0x001e8a                  _get_pwm2
+                  0x001f2c                  _main
+ .text            0x002064        0x1c8 build/default/production/lcd_i2c.o
+                  0x002064                  _LCD_clear_pos
+                  0x00208e                  _LCD_i2C_data
+                  0x00211a                  _LCD_i2C_cmd
+                  0x002170                  _LCD_i2c_init
+ .text            0x00222c        0x14c build/default/production/mcc_generated_files/spi2.o
+                  0x00222c                  _SPI2_Initialize
+                  0x00223e                  _SPI2_Exchange
+                  0x00226a                  _SPI2_ExchangeBuffer
+                  0x002334                  _SPI2_Exchange16bit
+                  0x002344                  _SPI2_Exchange16bitBuffer
+                  0x00235a                  _SPI2_TransferModeGet
+                  0x002370                  _SPI2_StatusGet
+ .text            0x002378        0x11e build/default/production/soft_i2c.o
+                  0x002378                  _I2C_start
+                  0x002398                  _I2C_stop
+                  0x0023b2                  _I2C_send
+                  0x0023fa                  _I2C_rcv
+                  0x002438                  _I2C_ackchk
+                  0x002456                  _I2C_acksnd
+                  0x002476                  _I2C_nacksnd
+ .text            0x002496        0x11c build/default/production/mcc_generated_files/pwm.o
+                  0x002496                  _PWM_Initialize
+                  0x00254a                  _PWM_SpecialEvent_CallBack
+                  0x002550                  _PWM_SpecialEvent_Tasks
+                  0x002564                  _PWM_Generator1_CallBack
+                  0x00256a                  _PWM_Generator1_Tasks
+                  0x00257e                  _PWM_Generator2_CallBack
+                  0x002584                  _PWM_Generator2_Tasks
+                  0x002598                  _PWM_Generator3_CallBack
+                  0x00259e                  _PWM_Generator3_Tasks
+ .text            0x0025b2        0x114 build/default/production/mcc_generated_files/reset.o
+                  0x0025b2                  _RESET_GetCause
+                  0x0025ba                  _RESET_CauseHandler
+                  0x0026be                  _RESET_CauseClearAll
+ .text            0x0026c6         0xc0 build/default/production/mcc_generated_files/dma.o
+                  0x0026c6                  _DMA_Initialize
+                  0x002722                  _DMA_Channel0_CallBack
+                  0x002728                  _DMA_Channel0_Tasks
+                  0x00273a                  _DMA_Channel1_CallBack
+                  0x002740                  _DMA_Channel1_Tasks
+                  0x002754                  _DMA_Channel2_CallBack
+                  0x00275a                  _DMA_Channel2_Tasks
+                  0x00276e                  _DMA_Channel3_CallBack
+                  0x002774                  _DMA_Channel3_Tasks
+ .text            0x002786         0xb2 build/default/production/mcc_generated_files/tmr2.o
+                  0x002786                  _TMR2_Initialize
+                  0x00279c                  _TMR2_Tasks_16BitOperation
+                  0x0027be                  _TMR2_Period16BitSet
+                  0x0027d0                  _TMR2_Period16BitGet
+                  0x0027d8                  _TMR2_Counter16BitSet
+                  0x0027ea                  _TMR2_Counter16BitGet
+                  0x0027f2                  _TMR2_Start
+                  0x002800                  _TMR2_Stop
+                  0x002808                  _TMR2_GetElapsedThenClear
+                  0x002820                  _TMR2_SoftwareCounterGet
+                  0x00282c                  _TMR2_SoftwareCounterClear
+ .text            0x002838         0xb2 build/default/production/mcc_generated_files/tmr3.o
+                  0x002838                  _TMR3_Initialize
+                  0x00284e                  _TMR3_Tasks_16BitOperation
+                  0x002870                  _TMR3_Period16BitSet
+                  0x002882                  _TMR3_Period16BitGet
+                  0x00288a                  _TMR3_Counter16BitSet
+                  0x00289c                  _TMR3_Counter16BitGet
+                  0x0028a4                  _TMR3_Start
+                  0x0028b2                  _TMR3_Stop
+                  0x0028ba                  _TMR3_GetElapsedThenClear
+                  0x0028d2                  _TMR3_SoftwareCounterGet
+                  0x0028de                  _TMR3_SoftwareCounterClear
+ .text            0x0028ea         0xb0 build/default/production/mcc_generated_files/tmr1.o
+                  0x0028ea                  _TMR1_Initialize
+                  0x002900                  _TMR1_Tasks_16BitOperation
+                  0x002920                  _TMR1_Period16BitSet
+                  0x002932                  _TMR1_Period16BitGet
+                  0x00293a                  _TMR1_Counter16BitSet
+                  0x00294c                  _TMR1_Counter16BitGet
+                  0x002954                  _TMR1_Start
+                  0x002962                  _TMR1_Stop
+                  0x00296a                  _TMR1_GetElapsedThenClear
+                  0x002982                  _TMR1_SoftwareCounterGet
+                  0x00298e                  _TMR1_SoftwareCounterClear
+ .text            0x00299a         0x90 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00299a                  _PIN_MANAGER_Initialize
+                  0x002a08                  _CN_CallBack
+                  0x002a0e                  _CN_SetInterruptHandler
+                  0x002a1e                  _CN_SetIOCInterruptHandler
+ .text            0x002a2a         0x52 build/default/production/mcc_generated_files/clock.o
+                  0x002a2a                  _CLOCK_Initialize
+ .text            0x002a7c         0x50 build/default/production/mcc_generated_files/adc1.o
+                  0x002a7c                  _ADC1_Initialize
+                  0x002a9e                  _ADC1_CallBack
+                  0x002aa4                  _ADC1_SetInterruptHandler
+                  0x002ab0                  _ADC1_Tasks
+ .text            0x002acc         0x3e build/default/production/mcc_generated_files/system.o
+                  0x002aea                  _SYSTEM_Initialize
+ .text            0x002b0a         0x20 build/default/production/mcc_generated_files/mcc.o
+                  0x002b0a                  _OSCILLATOR_Initialize
+                  0x002b12                  _SYSTEM_GetResetCause
+                  0x002b1a                  _SYSTEM_ResetCauseHandler
+                  0x002b22                  _SYSTEM_ResetCauseClearAll
 
-.init.delay32     0x002b3a         0x1c
- .init.delay32    0x002b3a         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                  0x002b3a                  ___delay32
+.init.delay32     0x002b2a         0x1c
+ .init.delay32    0x002b2a         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x002b2a                  ___delay32
 
-.text             0x002b56         0x24
- .text            0x002b56         0x16 build/default/production/mcc_generated_files/traps.o
-                  0x002b56                  _TRAPS_halt_on_error
- .text            0x002b6c          0xe build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x002b6c                  _INTERRUPT_Initialize
+.text             0x002b46         0x24
+ .text            0x002b46         0x16 build/default/production/mcc_generated_files/traps.o
+                  0x002b46                  _TRAPS_halt_on_error
+ .text            0x002b5c          0xe build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x002b5c                  _INTERRUPT_Initialize
