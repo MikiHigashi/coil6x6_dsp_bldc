@@ -160,12 +160,6 @@ int main(void)
     WATCHDOG_TimerClear();
     LCD_i2c_init(8);
 
-
-    // PWM値ハイギヤ 0=open loop
-//    signed short table_pwmh[] = {
-//        100,200
-//    };
-
     HL32 su;
     uint16_t n = 0;
     uint16_t pwm1 = 0;
@@ -176,39 +170,37 @@ int main(void)
     signed short target_pwm0 = 0;
     while (1) {
         WATCHDOG_TimerClear();
-
         target_pwm = table_pwmh[cnt_pwm];
-
         if (target_pwm) {
             __delay_us(100);    
             signed long adv;
             n = (as5048a() - ZEROD) & 0x3fff;
             if (target_pwm > 0) {
-                adv = 4096;
+                adv = 4096 + (target_pwm >> 4);
             }
             else if (target_pwm < 0) {
-                adv = (-4096);
+                adv = (-4096) + (target_pwm >> 4);;
                 target_pwm = (-target_pwm);
             }
             n &= 0x3fff;
             pwm1 = get_pwm1(n, adv, (uint16_t)target_pwm);
             pwm2 = get_pwm1(n + 5461, adv, (uint16_t)target_pwm);
             pwm3 = get_pwm1(n + 10923, adv, (uint16_t)target_pwm);
+            PDC1 = pwm1;
+            PDC2 = pwm2;
+            PDC3 = pwm3;
         }
-        else if (target_slow = table_slowh[cnt_pwm]) { // open loop
+        else { // open loop
+            target_slow = table_slowh[cnt_pwm];
             if (target_pwm0) {
                 su.H = (as5048a() - ZEROD) & 0x3fff;
+                su.H *= 5;
                 su.L = 0;
             }
             su.SL += target_slow;
             pwm1 = get_pwm2(su.H, MIN_VOL);
             pwm2 = get_pwm2(su.H + 5461, MIN_VOL);
             pwm3 = get_pwm2(su.H + 10923, MIN_VOL);
-        }
-        else {
-            pwm1 = 0;
-            pwm2 = 0;
-            pwm3 = 0;
         }
         PDC1 = pwm1;
         PDC2 = pwm2;
